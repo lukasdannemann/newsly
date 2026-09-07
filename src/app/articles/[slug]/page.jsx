@@ -10,7 +10,7 @@ export default async function ArticlePage({ params }) {
   try {
     const { data } = await storyblokApi.get(`cdn/stories/articles/${slug}`, {
       version: "draft",
-      resolve_relations: "article.author",
+      resolve_relations: ['article.author'],
     });
     story = data.story;
   } catch {
