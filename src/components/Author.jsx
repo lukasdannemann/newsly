@@ -4,9 +4,14 @@ import Link from "next/link";
 export default function Author({ blok }) {
 	return (
 		<article className="author" {...storyblokEditable(blok)}>
-			{blok.image?.filename && (
-				<img src={blok.image.filename} alt={blok.name} />
-			)}
+			 {blok.photo?.filename && (
+        <img
+          src={blok.photo.filename}
+          alt={blok.name}
+          width={400}
+          height={400}
+        />
+      )}
 
 			<h1>{blok.name}</h1>
 
