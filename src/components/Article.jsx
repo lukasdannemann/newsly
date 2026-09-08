@@ -19,6 +19,7 @@ export default function Article({ blok }) {
 					))}
 				</p>
 			)}
+			<span>{blok.category}</span>
 
 			<StoryblokServerRichText doc={blok.body} />
 			<Link href="/articles">Back to articles</Link>
