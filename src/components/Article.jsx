@@ -1,4 +1,4 @@
-import { storyblokEditable, StoryblokServerComponent, StoryblokServerRichText } from "@storyblok/react/rsc";
+import { storyblokEditable, StoryblokServerRichText } from "@storyblok/react/rsc";
 import Link from "next/link";
 
 export default function Article({ blok }) {
@@ -9,7 +9,15 @@ export default function Article({ blok }) {
 			<h1>{blok.title}</h1>
 
 			{authors.length > 0 && (
-				<p>Written by: {authors.map((a) => a.content.name).join(', ')}</p>
+				<p>
+					Written by:{' '}
+					{authors.map((author, i) => (
+						<span key={author.uuid}>
+							{i > 0 && ', '}
+							<Link href={`/${author.full_slug}`}>{author.content.name}</Link>
+						</span>
+					))}
+				</p>
 			)}
 
 			<StoryblokServerRichText doc={blok.body} />

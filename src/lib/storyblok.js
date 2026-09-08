@@ -1,6 +1,9 @@
 import Page from '@/components/Page';
 import Article from '@/components/Article';
 import ArticleList from '@/components/ArticleList';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
+import NavLink from '@/components/NavLink';
 import { apiPlugin, storyblokInit } from '@storyblok/react/rsc';
 
 export const getStoryblokApi = storyblokInit({
@@ -9,7 +12,10 @@ export const getStoryblokApi = storyblokInit({
 	components: {
 		page: Page,
 		article: Article,
-		article_list: ArticleList
+		article_list: ArticleList,
+		footer: Footer,
+		header: Header,
+		'nav-link': NavLink
 	},
 	apiOptions: {
 		/** Set the correct region for your space. Learn more: https://www.storyblok.com/docs/packages/storyblok-js#example-region-parameter */
