@@ -2,6 +2,7 @@ import Page from '@/components/Page';
 import Article from '@/components/Article';
 import ArticleList from '@/components/ArticleList';
 import Author from '@/components/Author';
+import AuthorList from '@/components/AuthorList';
 import { apiPlugin, storyblokInit } from '@storyblok/react/rsc';
 
 export const getStoryblokApi = storyblokInit({
@@ -12,6 +13,7 @@ export const getStoryblokApi = storyblokInit({
 		article: Article,
 		article_list: ArticleList,
 		author: Author,
+		author_list: AuthorList,
 	},
 	apiOptions: {
 		/** Set the correct region for your space. Learn more: https://www.storyblok.com/docs/packages/storyblok-js#example-region-parameter */
