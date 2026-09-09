@@ -1,1 +1,39 @@
 @import 'https://a.storyblok.com/f/212319/x/e6ccda03b8/blueprint-blank.css';
+header nav > ul {
+	display: flex;
+	gap: 1.5rem;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+header nav li {
+	position: relative;
+	list-style: none;
+}
+
+/* Undermeny dold som standard */
+header nav li.has-submenu > ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	min-width: 12rem;
+	padding: 0.5rem 0;
+	margin: 0;
+	background: #fff;
+	border: 1px solid #e5e7eb;
+	list-style: none;
+}
+
+/* Visa vid hover eller tangentbordsfokus */
+header nav li.has-submenu:hover > ul,
+header nav li.has-submenu:focus-within > ul {
+	display: block;
+}
+
+header nav li.has-submenu > ul a {
+	display: block;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+}
