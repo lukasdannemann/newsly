@@ -1,14 +1,14 @@
-
 import Link from 'next/link';
-import { storyblokEditable } from '@storyblok/react/rsc';
+import {
+	storyblokEditable
+} from '@storyblok/react/rsc';
 import { resolveLink } from '@/lib/resolveLink';
 
 export default function NavLink({ blok }) {
 	if (!blok) return null;
 
 	const href = resolveLink(blok.link);
-	const isExternal = blok.link?.linktype === 'url';
-
+	const isExternal = blok.link?.url?.startsWith('http');
 	return (
 		<li {...storyblokEditable(blok)}>
 			{isExternal ? (
