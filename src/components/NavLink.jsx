@@ -40,7 +40,7 @@ export default function NavLink({ blok }) {
 			{children.length > 0 && (
 				<ul
 					className="
-                        invisible absolute left-0 top-full z-50
+                        invisible absolute right-0 top-full z-50
                         min-w-48
                         translate-y-2
                         list-none
@@ -59,7 +59,7 @@ export default function NavLink({ blok }) {
                     "
 				>
 					{children.map((child) => (
-						<NavLink blok={child} key={child._uid} />
+						<NavLink classname='justify-center' blok={child} key={child._uid} />
 					))}
 				</ul>
 			)}
