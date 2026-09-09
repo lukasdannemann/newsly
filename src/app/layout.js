@@ -31,9 +31,11 @@ export default async function RootLayout({ children }) {
 	return (
 		<StoryblokProvider>
 			<html lang="en">
-				<body>
+				<body className='flex min-h-screen flex-col'>
 					{headerBlok && <StoryblokServerComponent blok={headerBlok} />}
+					<main className="mx-auto w-full max-w-5xl flex-1 px-6 py-8">
 					{children}
+					</main>
 					{footerBlok && <StoryblokServerComponent blok={footerBlok} />}
 				</body>
 			</html>

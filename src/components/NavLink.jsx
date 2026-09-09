@@ -16,7 +16,7 @@ export default function NavLink({ blok }) {
 					{blok.label}
 				</a>
 			) : (
-				<Link href={href}>{blok.label}</Link>
+				<Link href={href} className="transition-colors hover:text-neutral-900">{blok.label}</Link>
 			)}
 		</li>
 	);
