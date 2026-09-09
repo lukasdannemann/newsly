@@ -44,7 +44,7 @@ export default async function ArticleList({ blok }) {
 												article.content.coverImage.alt ||
 												article.content.title
 											}
-											className="aspect-[3/2] w-full object-cover transition-transform duration-300 group-hover:scale-105"
+											className="aspect-3/2 w-full object-cover transition-transform duration-300 group-hover:scale-105"
 										/>
 									</Link>
 								)}
